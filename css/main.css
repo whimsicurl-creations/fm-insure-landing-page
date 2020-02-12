@@ -1,0 +1,21 @@
+:root {
+    --dkviolet: hsl(256, 26%, 20%);
+    --grayblue: hsl(216, 30%, 68%);
+    --vdkviolet: hsl(270, 9%, 17%);
+    --dkgrayviolet: hsl(273, 4%, 51%);
+    --vltgray: hsl(0, 0%, 98%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    background: var(--vltgray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+}
