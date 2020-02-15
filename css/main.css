@@ -63,7 +63,7 @@ nav input:not(:checked) ~ label span:first-child {
     display: none;
 }
 
-nav ul {
+/* nav ul {
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,6 @@ nav ul {
     color: var(--vltgray);
     width: 100vw;
     height: 93vh;
-    /* height: 400px; */
     background: var(--dkgray);
     margin: 0;
     padding: 0;
@@ -101,8 +100,72 @@ nav ul li a {
 nav input:checked ~ ul {
     visibility: visible;
     background: var(--dkgray);
+} */
+
+/* INTRO */
+#intro {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
+#intro div {
+    margin: 0;
+}
+
+#intro div img {
+    width: 100%;
+    height: auto;
+}
+
+#intro .wrapper {
+    background: var(--dkviolet);
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin-top: -5px;
+}
+
+#intro .wrapper::before {
+    background-image: url('../images/bg-pattern-intro-left-mobile.svg');
+    content: '';
+    z-index: 1;
+    height: 175px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+#intro .wrapper h1,
+#intro .wrapper p,
+#intro .wrapper a {
+    color: white;
+    text-align: center;
+}
+
+#intro .wrapper h1 {
+    font-size: 2.75rem;
+    line-height: 1;
+    padding: 0 2.5rem;
+    margin: -100px auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* ABOUT */
+#about::before {
+    background-image: url('../images/bg-pattern-intro-right-mobile.svg');
+    content: '';
+    z-index: 10;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+
+/* FOOTER */
 footer {
     background: var(--vltgray);
 }
