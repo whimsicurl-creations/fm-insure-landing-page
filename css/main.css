@@ -153,13 +153,16 @@ nav input:checked ~ ul {
     z-index: 2;
 }
 
-#intro .wrapper a {
+button {
+    background: transparent;
     text-transform: uppercase;
     text-decoration: none;
+    color: white;
     border: 1px solid white;
-    width: 40%;
     justify-self: center;
     align-self: start;
+    padding: 10px 20px;
+    font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
     margin-top: 1.5rem;
@@ -202,6 +205,41 @@ nav input:checked ~ ul {
     text-align: center;
     line-height: 1.5;
     margin-top: 0;
+}
+
+/* HOW WE WORK */
+.card {
+    background: var(--dkviolet);
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.card:before {
+    background: url('../images/bg-pattern-how-we-work-mobile.svg');
+    background-repeat: no-repeat;
+    content: '';
+    position: relative;
+    top: 0;
+    left: calc(100% - 175px);
+    height: 350px;
+}
+
+.card h2 {
+    color: white;
+    margin-top: -90%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    z-index: 2;
+    
+}
+
+.card button {
+    margin-bottom: 2rem;
+    margin-top: -25%;
 }
 
 /* FOOTER */
