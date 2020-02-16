@@ -23,6 +23,36 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--vdkviolet);
 }
 
+ul {
+    padding-left: none;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+ul h6 {
+    color: var(--dkgrayviolet);
+    text-transform: uppercase;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    
+    margin: 20px auto;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    color: var(--dkviolet);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 2.25;
+}
+
 /* HEADER */
 header {
     position: fixed;
