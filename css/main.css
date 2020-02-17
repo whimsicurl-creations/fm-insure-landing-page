@@ -241,7 +241,7 @@ button {
 .card {
     background: var(--dkviolet);
     width: 85%;
-    margin: 0 auto;
+    margin: 0 auto 8rem;
     overflow: hidden;
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -275,4 +275,41 @@ button {
 /* FOOTER */
 footer {
     background: var(--vltgray);
+}
+
+#logo-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#logo-social img:first-of-type {
+    max-width: 30%;
+    height: auto;
+    margin: 5rem auto 2rem;
+}
+
+#logo-social #social-icons {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--dkgrayviolet);
+    margin-bottom: 1rem;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-social #social-icons a img {
+    margin: 8px;
+    max-width: 75%;
+}
+
+#footer-sitemap {
+    padding: 2rem 0 3rem;
+}
+
+#footer-sitemap ul {
+    padding-left: 0;
 }
