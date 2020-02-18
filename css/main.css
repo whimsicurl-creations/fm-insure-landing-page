@@ -54,6 +54,11 @@ li a {
     line-height: 2.25;
     letter-spacing: 0.5px;
 }
+
+li a:hover {
+    text-decoration: underline;
+}
+
 p {
     text-align: center;
     line-height: 1.5;
@@ -149,10 +154,23 @@ nav ul li a {
     line-height: 3;
 }
 
+#mobile-nav ul li a:hover {
+    text-decoration: none;
+}
+
 nav ul li:last-child {
     border: 2px solid white;
     width: 80%;
     align-self: center;
+}
+
+nav ul li:last-child:hover {
+    background: white;
+}
+
+nav ul li:last-child:hover a {
+    color: var(--dkviolet);
+    font-weight: bolder;
 }
 
 nav input:checked ~ ul {
@@ -245,6 +263,12 @@ button {
     font-weight: 700;
     font-size: 0.75rem;
     margin-top: 1.5rem;
+}
+
+button:hover {
+    background: white;
+    color: var(--dkgrayviolet);
+    font-weight: bolder;
 }
 
 /* ABOUT */
@@ -344,10 +368,20 @@ footer {
     max-width: 75%;
 }
 
+#logo-social #social-icons a:hover img {
+    filter: brightness(50%);
+}
+
 #footer-sitemap {
     padding: 2rem 0 3rem;
 }
 
 #footer-sitemap ul {
     padding-left: 0;
+}
+
+/* ATTRIBUTION */
+.attribution {
+    border-top: 1px solid var(--dkgrayviolet);
+    padding: 1rem 0;
 }
