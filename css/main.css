@@ -220,8 +220,8 @@ nav input:checked ~ ul {
     top: -50px;
     right: 0;
     bottom: 0;
-    left: 67%;
-    width: 33%;
+    left: calc(100% - 126px);
+    width: 126px;
 }
 
 #intro .text-wrapper {
