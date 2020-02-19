@@ -110,7 +110,7 @@ nav input:not(:checked) ~ label span:first-child {
     display: none;
 }
 
-nav ul:before {
+#mobile-nav ul:before {
     background-image: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     z-index: 5;
@@ -122,7 +122,7 @@ nav ul:before {
     height: 215px;
 }
 
-nav ul {
+#movile-nav ul {
     visibility: hidden;
     display: none;
     flex-direction: column;
@@ -384,4 +384,56 @@ footer {
 .attribution {
     border-top: 1px solid var(--dkgrayviolet);
     padding: 1rem 0;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (min-width: 700px) {
+    #mobile-nav {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: flex;
+        justify-content: flex-end;
+        /* height: 80px; */
+        width: 100%;
+    }
+
+    #desktop-nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    #desktop-nav ul li a {
+        color: var(--dkgrayviolet);
+        font-size: 1rem;
+    }
+
+    nav ul li:last-child {
+        border: 2px solid var(--dkviolet);
+        width: auto;
+        padding: 0 30px;
+        align-self: center;
+    }
+    
+    #desktop-nav ul li:last-child a {
+        color: var(--dkviolet);
+    }
+
+    #desktop-nav ul li:hover a {
+        color: var(--vdkviolet);
+        text-decoration: none;
+    }
+
+    #desktop-nav ul li:last-child:hover {
+        background: var(--dkviolet);
+    }
+
+    #desktop-nav ul li:last-child:hover a {
+        color: white;
+        text-decoration: none;
+    }
 }
