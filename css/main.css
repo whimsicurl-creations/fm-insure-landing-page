@@ -388,23 +388,31 @@ footer {
 
 /* ===== MEDIA QUERY ===== */
 @media (min-width: 700px) {
+    header {
+        justify-content: center;
+    }
+
     #mobile-nav {
         display: none;
     }
 
     #desktop-nav {
+        max-width: 1048px;
         display: flex;
-        justify-content: flex-end;
-        /* height: 80px; */
         width: 100%;
     }
 
     #desktop-nav ul {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
         width: 100%;
+        margin-right: 20px;
+    }
+
+    #desktop-nav ul li {
+        margin-right: 20px;
     }
 
     #desktop-nav ul li a {
