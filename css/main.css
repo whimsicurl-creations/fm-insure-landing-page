@@ -94,25 +94,26 @@ header {
     position: relative;
 }
 
-nav input {
+#mobile-nav input {
     display: none;
 }
 
-nav label {
+#mobile-nav label {
     padding: 25px 20px;
 }
 
-nav input:checked ~ label span:last-child {
+#mobile-nav input:checked ~ label span:last-child {
     display: none;
 }
 
-nav input:not(:checked) ~ label span:first-child {
+#mobile-nav input:not(:checked) ~ label span:first-child {
     display: none;
 }
 
 #mobile-nav ul:before {
     background-image: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 5;
     content: '';
     position: absolute;
@@ -122,7 +123,7 @@ nav input:not(:checked) ~ label span:first-child {
     height: 215px;
 }
 
-#movile-nav ul {
+#mobile-nav ul {
     visibility: hidden;
     display: none;
     flex-direction: column;
@@ -138,13 +139,13 @@ nav input:not(:checked) ~ label span:first-child {
     padding-top: 10px;
 }
 
-nav ul li {
+#mobile-nav ul li {
     list-style-type: none;
     text-align: center;
     margin-top: 10px;
 }
 
-nav ul li a {
+#mobile-nav ul li a {
     color: var(--vltgray);
     text-transform: uppercase;
     text-decoration: none;
@@ -158,22 +159,23 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li:last-child {
+#mobile-nav ul li:last-child {
     border: 2px solid white;
     width: 80%;
+    max-width: 250px;
     align-self: center;
 }
 
-nav ul li:last-child:hover {
+#mobile-nav ul li:last-child:hover {
     background: white;
 }
 
-nav ul li:last-child:hover a {
+#mobile-nav ul li:last-child:hover a {
     color: var(--dkviolet);
     font-weight: bolder;
 }
 
-nav input:checked ~ ul {
+#mobile-nav input:checked ~ ul {
     visibility: visible;
     display: flex;
     background: var(--dkgray);
