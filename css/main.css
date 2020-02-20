@@ -452,11 +452,12 @@ footer {
 
     /* ABOUT */
     #about {
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(3, auto);
         grid-gap: 30px;
         max-width: 1200px;
         margin: 0 auto 100px;
+        padding: 0 20px;
     }
 
     #about .spacer,
@@ -485,7 +486,30 @@ footer {
     }
 
     /* HOW WE WORK */
+    .card {
+        max-width: 1200px;
+        height: 200px;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        grid-template-areas: "text . button";
+        background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+        background-size: 400px;
+    }
 
+    .card h2 {
+        width: 80%;
+        max-width: 400px;
+        text-align: left;
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    .card button {
+        justify-self: center;
+        align-self: end;
+        margin: auto;
+        margin-right: 5rem;
+    }
 
     /* FOOTER */
 }
