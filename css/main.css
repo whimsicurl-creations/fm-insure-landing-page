@@ -232,6 +232,10 @@ header {
     position: relative;
 }
 
+#intro .spacer {
+    display: none;
+}
+
 #intro .wrapper h1,
 #intro .wrapper p,
 #intro .wrapper a {
@@ -491,28 +495,32 @@ footer {
         width: 40%;
         position: relative;
         margin-top: 0;
+        height: auto;
+        margin: 12rem 8rem 6rem;
     }
 
     #intro .text-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        position: absolute;
-        top: 200px;
-        left: 20%;
     }
 
     #intro .wrapper h1,
     #intro .wrapper p {
         text-align: left;
         padding-left: 0;
-    }    
+    } 
+    
+    #intro .wrapper h1 {
+        margin: 0;
+    }
 
-    #intro .wrapper h1::before {
+    #intro .spacer {
+        display: block;
+        border-top: 1px solid white;
         content: '';
-        border-bottom: 1px solid white;
-        width: 25%;
-        height: 10px;
+        width: 100px;
+        margin-bottom: 3rem;
     }
 
     #intro #intro-image {
