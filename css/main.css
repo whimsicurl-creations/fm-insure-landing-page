@@ -110,7 +110,7 @@ header {
     display: none;
 }
 
-#mobile-nav ul:before {
+#mobile-nav ul::before {
     background-image: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,7 +201,7 @@ header {
     height: 530px;
 }
 
-#intro .wrapper:before {
+#intro .wrapper::before {
     background-image: url('../images/bg-pattern-intro-left-mobile.svg');
     content: '';
     z-index: 1;
@@ -212,7 +212,7 @@ header {
     background-repeat: no-repeat;
 }
 
-#intro .text-wrapper:after {
+#intro .text-wrapper::after {
     background-image: url('../images/bg-pattern-intro-right-mobile.svg');
     position: relative;
     background-repeat: no-repeat;
@@ -449,6 +449,78 @@ footer {
     }
 
     /* INTRO */
+    #intro {
+        flex-direction: row;
+        position: relative;
+        background: var(--dkviolet);
+    }
+
+    #intro::before {
+        background-image: url('../images/bg-pattern-intro-right-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        content: '';
+        height: 600px;
+        width: 350px;
+        z-index: 3;
+    }
+
+    #intro::after {
+        background-image: url('../images/bg-pattern-intro-left-desktop.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 65%;
+        left: 0;
+        content: '';
+        height: 600px;
+        width: 300px;
+        z-index: 10;
+
+    }
+
+    #intro .wrapper::before,
+    #intro .text-wrapper::after {
+        background-image: none;
+        display: none;
+    }
+
+    #intro .wrapper {
+        width: 40%;
+        position: relative;
+        margin-top: 0;
+    }
+
+    #intro .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 200px;
+        left: 20%;
+    }
+
+    #intro .wrapper h1,
+    #intro .wrapper p {
+        text-align: left;
+        padding-left: 0;
+    }    
+
+    #intro .wrapper h1::before {
+        content: '';
+        border-bottom: 1px solid white;
+        width: 25%;
+        height: 10px;
+    }
+
+    #intro #intro-image {
+        position: absolute;
+        top: 100px;
+        max-width: 450px;
+        left: 60%;
+    }
 
     /* ABOUT */
     #about {
@@ -528,6 +600,7 @@ footer {
         margin: 0 auto;
         background-image: none;
         height: 80px;
+        padding: 0 30px;
     }
 
     #logo-social img:first-of-type {
