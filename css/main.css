@@ -25,12 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ul {
-    padding-left: none;
+    padding-left: 0;
     margin-bottom: 25px;
     text-align: center;
 }
 
-ul h6 {
+#footer-sitemap ul li:first-of-type {
     color: var(--dkgrayviolet);
     text-transform: uppercase;
     font-family: 'Karla', sans-serif;
@@ -537,7 +537,6 @@ footer {
         max-width: 600px;
         overflow: visible;
         position: relative;
-        border: 1px solid yellow;
     }
 
     #intro #intro-image img {
