@@ -25,12 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ul {
-    padding-left: none;
+    padding-left: 0;
     margin-bottom: 25px;
     text-align: center;
 }
 
-ul h6 {
+#footer-sitemap ul li:first-of-type {
     color: var(--dkgrayviolet);
     text-transform: uppercase;
     font-family: 'Karla', sans-serif;
@@ -74,7 +74,7 @@ header {
     height: 80px;
     background: white;
     top: 0;
-    z-index: 10;
+    z-index: 20;
 }
 
 .logo {
@@ -110,7 +110,7 @@ header {
     display: none;
 }
 
-#mobile-nav ul:before {
+#mobile-nav ul::before {
     background-image: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,7 +201,7 @@ header {
     height: 530px;
 }
 
-#intro .wrapper:before {
+#intro .wrapper::before {
     background-image: url('../images/bg-pattern-intro-left-mobile.svg');
     content: '';
     z-index: 1;
@@ -212,7 +212,7 @@ header {
     background-repeat: no-repeat;
 }
 
-#intro .text-wrapper:after {
+#intro .text-wrapper::after {
     background-image: url('../images/bg-pattern-intro-right-mobile.svg');
     position: relative;
     background-repeat: no-repeat;
@@ -230,6 +230,10 @@ header {
     display: grid;
     grid-template-rows: repeat(3, auto);
     position: relative;
+}
+
+#intro .spacer {
+    display: none;
 }
 
 #intro .wrapper h1,
@@ -347,6 +351,7 @@ footer {
     height: 195px;
     background-image: url('../images/bg-pattern-footer-mobile.svg');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #logo-social img:first-of-type {
@@ -358,7 +363,6 @@ footer {
 #logo-social #social-icons {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--dkgrayviolet);
-    margin-bottom: 1rem;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -389,7 +393,8 @@ footer {
 }
 
 /* ===== MEDIA QUERY ===== */
-@media (min-width: 700px) {
+@media (min-width: 725px) {
+    /* HEADER & NAV */
     header {
         justify-content: center;
     }
@@ -445,5 +450,214 @@ footer {
     #desktop-nav ul li:last-child:hover a {
         color: white;
         text-decoration: none;
+    }
+
+    /* INTRO */
+    #intro {
+        flex-direction: row;
+        position: relative;
+        background: var(--dkviolet);
+    }
+
+    #intro::before {
+        background-image: url('../images/bg-pattern-intro-right-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 95%;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        content: '';
+        height: 600px;
+        width: 350px;
+        z-index: 3;
+    }
+
+    #intro::after {
+        background-image: url('../images/bg-pattern-intro-left-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        position: absolute;
+        top: 75%;
+        left: 0;
+        content: '';
+        height: 600px;
+        width: 300px;
+        z-index: 10;
+
+    }
+
+    #intro .wrapper::before,
+    #intro .text-wrapper::after {
+        background-image: none;
+        display: none;
+    }
+
+    #intro .wrapper {
+        width: 50%;
+        max-width: 600px;
+        position: relative;
+        height: auto;
+        margin: 140px auto 100px;
+        justify-items: end;
+    }
+
+    #intro .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 85%;
+    }
+
+    #intro .wrapper h1,
+    #intro .wrapper p {
+        text-align: left;
+        padding-left: 0;
+    } 
+    
+    #intro .wrapper h1 {
+        margin: 0;
+        font-size: 3.5rem;
+        width: 80%;
+    }
+
+    #intro .wrapper p {
+        font-size: 0.85rem;
+    }
+
+    #intro .spacer {
+        display: block;
+        border-top: 1px solid white;
+        content: '';
+        width: 100px;
+        margin-bottom: 3rem;
+    }
+
+    #intro #intro-image {
+        width: 50%;
+        max-width: 600px;
+        overflow: visible;
+        position: relative;
+    }
+
+    #intro #intro-image img {
+        width: 80%;
+        min-width: 350px;
+        max-width: 450px;
+        margin: 60px auto 0 10px;
+        position: absolute;
+    }
+
+    /* ABOUT */
+    #about {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 30px;
+        max-width: 1200px;
+        margin: 100px auto 100px;
+        padding: 0 20px;
+    }
+
+    #about .spacer,
+    #about h2 {
+        grid-column: 1 / -1;
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    #about h2 {
+        font-weight: 700;
+    }
+
+    #about .spacer {
+        width: 100px;
+    }
+
+    .about-item {
+        justify-items: start;
+        text-align: left;
+        width: 100%;
+    }
+
+    #about h3 {
+        margin: 20px 0 10px;
+    }
+    #about p {
+        text-align: left;
+    }
+
+    /* HOW WE WORK */
+    .card {
+        max-width: 1200px;
+        height: 200px;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        grid-template-areas: "text . button";
+        background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+        background-size: 400px;
+    }
+
+    .card h2 {
+        width: 80%;
+        max-width: 400px;
+        text-align: left;
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    .card button {
+        justify-self: center;
+        align-self: end;
+        margin: auto;
+        margin-right: 5rem;
+    }
+
+    /* FOOTER */
+    footer {
+        background: url('../images/bg-pattern-footer-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 35%;
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    #logo-social {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        border-bottom: 1px solid var(--dkgrayviolet);
+        margin: 0 auto;
+        background-image: none;
+        height: 80px;
+        padding: 0 30px;
+    }
+
+    #logo-social img:first-of-type {
+        width: 50%;
+        max-width: 100px;
+        margin: auto;
+        margin-left: 0;
+    }
+
+    #logo-social #social-icons {
+        border-bottom: none;
+        width: 50%;
+        margin: auto;
+        margin-right: 0;
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
+
+    #footer-sitemap {
+        max-width: 1200px;
+        padding: 0 30px 2rem;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    #footer-sitemap ul {
+        text-align: left;
+        width: 20%;
     }
 }
